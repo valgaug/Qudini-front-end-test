@@ -34,27 +34,25 @@ This is a JSON api:
  - `GET /api/customers/served`: returns a list of customers served
 
  - `POST /api/customer/add`: adds a customer
-    - example body: `{name: 'Roger Moore', product: {name: 'Gun repair'}}`
+    - example body: `{ name: 'Roger Moore', product: { name: 'Gun repair' } }`
 
  - `PUT /api/customer/serve`: serves a customer
-    - example body: `{id: '71a06844-eca5-46d3-98a0-4a6b8beb1440'}`
+    - example body: `{ id: '71a06844-eca5-46d3-98a0-4a6b8beb1440' }`
 
  - `DELETE /api/customer/remove`: removes a customer
-    - example body: `{id: '71a06844-eca5-46d3-98a0-4a6b8beb1440'}`
+    - example body: `{ id: '71a06844-eca5-46d3-98a0-4a6b8beb1440' }`
 
 ## The Mission
 
  1. As you can see now the app fails horribly! Can you help find the bug and fix it for us?
 
- 2. That ```<add-customer>``` component does not seem to actually do anything. Can you implement this feature? The user is supposed to add a customer with name and product. You can find the base in the Customer.js file.
+ 2. That `<add-customer>` component does not seem to actually do anything. Can you implement this feature? The user is supposed to add a customer with name and product. You can find the base in the Customer.js file.
 
- 3. Have a look at the ```<customer>``` component it's missing an action to serve the customer. Can you do this?
+ 3. Have a look at the `<customer>` component, it's missing an action to serve the customer. Can you do this?
 
- 4. QA time! We'd want to make absolutely sure that all the requirements are implemented correctly, are they?
+ 4. The look is... a bit too bare for our taste, can you add some styling please? Feel free to improvise here but we'd like it to be in SASS.
 
- 5. Bonus: The look is... a bit too bare for our taste, can you add some styling please? Feel free to improvise here but we'd like it to be in SASS.
-
- 6. Bonus: We'd love to really optimize the page load speed, ideally we'd only want to serve one js file. Is this something you can do?
+ 5. Bonus: We'd love to really optimize the page load speed, ideally we'd only want to serve one js file. Is this something you can do?
 
 ## Ready, get set - GO!
 
