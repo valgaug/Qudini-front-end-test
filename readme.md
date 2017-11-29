@@ -52,7 +52,7 @@ This is a JSON api:
 
  4. The look is... a bit too bare for our taste, can you add some styling please? Feel free to improvise here but we'd like it to be in SASS.
  
- 5. Bonus: QA time! We'd want to make absolutely sure that all the requirements are implemented correctly, could you implement some unit tests?
+ 5. Bonus: QA time! We'd want to make absolutely sure that all the requirements are implemented correctly, could you add some unit tests?
 
  6. Bonus: We'd love to really optimize the page load speed, ideally we'd only want to serve one js file. Is this something you can do?
 
