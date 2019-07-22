@@ -1,31 +1,19 @@
 <!DOCTYPE html>
-<html>
-	<head lang="en">
-		<meta charset="UTF-8">
-		<title>Queue App</title>
-		<script src="/bower_components/angularjs/angular.js"></script>
-		<script src="/QueueApp.js"></script>
-		<script src="/add-customer/AddCustomer.js"></script>
-		<script src="/customer/Customer.js"></script>
-	</head>
-	<body ng-app="qudini.QueueApp" ng-controller="QueueController">
-
-		<h2>Add Customer</h2>
-		<add-customer on-added="onCustomerAdded()"></add-customer>
-
-		<h2>Queueing Customers</h2>
-		<ul>
-			<li ng-repeat="customer in customers">
-				<customer customer="customer" on-served="onCustomerServed()" on-removed="onCustomerRemoved()"></customer>
-			</li>
-		</ul>
-
-		<h2>Served customers</h2>
-		<ul>
-			<li ng-repeat="customer in customersServed">
-				<customer customer="customer" on-served="onCustomerServed()" on-removed="onCustomerRemoved()"></customer>
-			</li>
-		</ul>
-
-	</body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="theme-color" content="#000000" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <title>Qudini Front-end Pair Programming Exercise</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
 </html>

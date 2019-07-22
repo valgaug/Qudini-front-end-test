@@ -1,65 +1,25 @@
-# Qudini Code Test
+# Front-end Engineer Pair Programming Exercise
 
-## The Simple Queue App
+### Preface
 
-The structure of this application is based off directives acting as components handling their own data. The backend is a simple
-NodeJS server serving in memory JSON objects.
+At Qudini we utilise a range of front-end technologies which make up our stack. We're evolving our existing and greenfield applications to make use of a more modern set of technologies. We make use of React on both the web with React-DOM and on mobile devices using React-Native.
 
-## Requirements
+This exercise is intended to give you an idea into the technology stack we're currently using along with experiencing the domain we apply these technologies towards. This is not seen as a test and there are no right or wrong answers, we're open to your ideas and opinions in regards to how you feel the below problem could be best solved.
 
-The application works in the following way:
+### The exercise
 
- - A queue consists of a list of customers.
+Within this repository you will find a project created with create-react-app, some of the features have been partially implemented however we would like you to revisit them and complete the implementation.
 
- - User should be able to add a customer to the queue by entering their name and selecting a product (the reason for them queueing).
+The new Queues screen feature should have the following capabilities:
+- Ability to list the current customers within a Queue.
+    - This has been partially implemented.
+- Make a request to the Qudini API and display the list of customers along with their expected time.
+    - A <Customer /> component was created by the previous engineer which you can use to render the content.
+- Fetch the profile image of the customer using the Gravatar Image request API ( https://en.gravatar.com/site/implement/images).
+- Ability to filter the list of returned customers using a text component above the list.
+- Ability to refresh the list of customers every 30 seconds. 
 
- - User should be able to see the list of the queueing customers and served customers.
-
- - User should be able to serve a customer in the queue.
-
- - When a customer is served they are displayed in a list of served customers. When the customer is in the served list it should not be possible to remove or serve them again.
-
- - User should be able to remove a customer from the queue.
-
- - The list of customers in queue and customers served should be updated to always show the correct status, without refreshing the browser.
-
-Feel free to implement features in your own way, but the general structure of the app should stay the same.
-
-## The API
-
-This is a JSON api:
-
- - `GET /api/customers`: returns a list of customers
-
- - `GET /api/customers/served`: returns a list of customers served
-
- - `POST /api/customer/add`: adds a customer
-    - example body: `{ name: 'Roger Moore', product: { name: 'Gun repair' } }`
-
- - `PUT /api/customer/serve`: serves a customer
-    - example body: `{ id: '71a06844-eca5-46d3-98a0-4a6b8beb1440' }`
-
- - `DELETE /api/customer/remove`: removes a customer
-    - example body: `{ id: '71a06844-eca5-46d3-98a0-4a6b8beb1440' }`
-
-## The Mission
-
- 1. As you can see now the app fails horribly! Can you help find the bug and fix it for us?
-
- 2. That `<add-customer>` component does not seem to actually do anything. Can you implement this feature? The user is supposed to add a customer with name and product. You can find the base in the Customer.js file.
-
- 3. Have a look at the `<customer>` component, it's missing an action to serve the customer. Can you do this?
-
- 4. The look is... a bit too bare for our taste, can you add some styling please? Feel free to improvise here but we'd like it to be in SASS.
- 
- 5. Bonus: QA time! We'd want to make absolutely sure that all the requirements are implemented correctly, could you add some unit tests?
-
- 6. Bonus: We'd love to really optimize the page load speed, ideally we'd only want to serve one js file. Is this something you can do?
-
-## Ready, get set - GO!
-
- - Install the app: `npm install`
-
- - Start the server: `npm start`
-
-App is at http://127.0.0.1:1337, good luck!
+We would like to see the following practised within the implementation:
+- TDD / BDD
+- Test coverage applied where needed.
+- Some form of state management.
