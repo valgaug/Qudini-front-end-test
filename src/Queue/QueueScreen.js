@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
+import { fetchQueueData } from "../mockApi";
+
+// eslint-disable-next-line
 import base64 from 'base-64';
+
 
 export default class extends Component {
     constructor(props) {
@@ -10,12 +14,8 @@ export default class extends Component {
     }
 
     componentDidMount() {
-        const headers = new Headers();
-        headers.set('Authorization', 'Basic ' + base64.encode("codetest1:codetest100"));
-        fetch('api/queue/gj9fs', {
-            method: 'GET',
-            headers
-        }).then(response => response.json())
+        fetchQueueData()
+            .then(response => response.json())
             .then(json => {
                 this.setState({
                     customers: json.queueData.queue.customersToday

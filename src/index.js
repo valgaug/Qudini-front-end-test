@@ -8,7 +8,7 @@ import Logo from './components/Logo';
 import Navigation from './components/Navigation';
 import QueueScreen from './Queue/QueueScreen';
 import './index.css';
-import logo from './logo.svg';
+import logo from './qudini-logo.png';
 import Content from './components/Content';
 
 const App = () =>
