@@ -397,8 +397,9 @@ const queueData = {
 }
 
 export const fetchQueueData = () => {
-  console.log("fetchQueueData called", new Date())
-  Promise.resolve(
+  console.log("fetchQueueData called", new Date());
+
+  return Promise.resolve(
     {
       status: 200,
       json: () => Promise.resolve(queueData)
