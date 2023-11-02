@@ -25,6 +25,9 @@ We would like to see the following practised within the implementation:
 - Test coverage applied where needed.
 - Some form of state management.
 
+You’re free to use any 3rd part library or framework if you can justify the need.
+
+## Submition
 The completed project should be shared via a public `Github` repo.
 
-You’re free to use any 3rd part library or framework if you can justify the need.
+
