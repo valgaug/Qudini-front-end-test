@@ -17,7 +17,8 @@ The new Queues screen feature should have the following capabilities:
     - A `<Customer />` component was created by the previous engineer which you can use to render the content.
 - Fetch the profile image of the customer using the Gravatar Image request API (https://en.gravatar.com/site/implement/images).
 - Ability to filter the list of returned customers using a text input component above the list.
-- Ability to refresh the list of customers every `30 seconds`. 
+- Ability to refresh the list of customers every `30 seconds`.
+- Styling 
 
 We would like to see the following practised within the implementation:
 - TDD / BDD
