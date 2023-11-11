@@ -1,21 +1,22 @@
-import reducer, { initialState } from "./reducer";
+import queueReducer, { initialState, addCustomer } from './reducer';
 
-describe(`the reducer module`, () => {
-    it(`should have the following initialState`, () => {
-        expect(initialState).toHaveProperty('customers');
-        expect(initialState.customers).toHaveProperty('size', 0);
-    });
+describe('the queue reducer', () => {
+  it('should have the following initialState', () => {
+    expect(initialState).toHaveProperty('customers');
+    expect(initialState.customers).toHaveProperty('size', 0);
+  });
 
-    it(`should return the initialState on the default case`, () => {
-        // Given
-        const action = {
-            type: 'TEST'
-        };
+  it('should return the initialState on the default case', () => {
+    const action = { type: 'unknown' };
+    const state = queueReducer(undefined, action);
+    expect(state).toEqual(initialState);
+  });
 
-        // When
-        const result = reducer(undefined, action);
-
-        // Then
-        expect(result).toEqual(initialState)
-    });
+  it('should handle addCustomer', () => {
+    const newCustomer = { id: 1, name: 'John Doe' };
+    const action = addCustomer(newCustomer);
+    const state = queueReducer(initialState, action);
+    expect(state.customers.size).toBe(1);
+    expect(state.customers.get(0)).toEqual(newCustomer);
+  });
 });

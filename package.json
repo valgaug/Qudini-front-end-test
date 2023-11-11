@@ -3,8 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/eslint-parser": "latest",
+    "@babel/preset-env": "^7.23.3",
     "@reduxjs/toolkit": "latest",
     "base-64": "latest",
+    "eslint-webpack-plugin": "latest",
     "immutable": "latest",
     "normalize.css": "latest",
     "react": "latest",
@@ -12,9 +15,7 @@
     "react-redux": "latest",
     "react-scripts": "latest",
     "styled-components": "latest",
-    "typescript": "latest",
-    "eslint-webpack-plugin": "latest",
-    "@babel/eslint-parser": "latest"
+    "typescript": "latest"
   },
   "scripts": {
     "start": "react-scripts start",
