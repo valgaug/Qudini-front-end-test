@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { fetchQueueData } from '../mockApi';
 
-// eslint-disable-next-line
-import base64 from 'base-64';
-
 const QueueScreen = () => {
   const [customers, setCustomers] = useState([]);
 
