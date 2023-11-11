@@ -1,12 +1,23 @@
+import { createSlice } from '@reduxjs/toolkit';
 import { List } from 'immutable';
 
-export const initialState = {
-    customers: List.of()
+const initialState = {
+  customers: List.of(),
 };
 
-export default (state = initialState, action) => {
-    switch(action.type) {
-        default:
-            return state;
-    }
-}
+const queueSlice = createSlice({
+  name: 'queue',
+  initialState,
+  reducers: {
+    // Define reducers here. For example:
+    // addCustomer: (state, action) => {
+    //     state.customers = state.customers.push(action.payload);
+    // },
+    // You can add more reducers as needed
+  },
+});
+
+// Export the automatically generated action creators
+export const { addCustomer /*, other actions */ } = queueSlice.actions;
+
+export default queueSlice.reducer;

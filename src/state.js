@@ -1,12 +1,9 @@
-import { configureStore } from 'redux-starter-kit';
-import { combineReducers } from 'redux';
-import queue from './Queue/reducer'
-
-const reducer = combineReducers({
-    queue
-});
+import { configureStore } from '@reduxjs/toolkit';
+import queueReducer from './Queue/reducer';
 
 export default configureStore({
-    reducer,
-    devTools: process.env.NODE_ENV !== 'production'
+  reducer: {
+    queue: queueReducer,
+  },
+  devTools: process.env.NODE_ENV !== 'production',
 });
