@@ -10,6 +10,7 @@
     "crypto-js": "^4.2.0",
     "eslint-webpack-plugin": "latest",
     "immutable": "latest",
+    "moment-timezone": "^0.5.43",
     "normalize.css": "latest",
     "react": "latest",
     "react-dom": "latest",

@@ -1,6 +1,12 @@
 import styled from 'styled-components';
 
-export default styled.h1`
+const StyledName = styled.h1`
   font-size: 16px;
   color: darkslategrey;
 `;
+
+const ProfileName = ({ name }) => {
+  return <StyledName>{name}</StyledName>;
+};
+
+export default ProfileName;
