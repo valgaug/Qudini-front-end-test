@@ -22,7 +22,13 @@ const QueueScreen = () => {
   return (
     <div>
       {customers.map((customer) => (
-        <Customer key={customer.id} email={customer.customer.emailAddress} name={customer.customer.name} />
+        <Customer
+          key={customer.id}
+          email={customer.customer.emailAddress}
+          name={customer.customer.name}
+          expectedTime={customer.originalExpectedTime}
+          // I assumed we want to display the 'originalExpectedTime' and not 'expectedTime' which is the same for everyone
+        />
       ))}
     </div>
   );
