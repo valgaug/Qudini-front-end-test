@@ -1,8 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { List } from 'immutable';
 
 export const initialState = {
-  customers: List.of(),
+  customers: [],
 };
 
 const queueSlice = createSlice({
@@ -10,11 +9,14 @@ const queueSlice = createSlice({
   initialState,
   reducers: {
     addCustomer: (state, action) => {
-      state.customers = state.customers.push(action.payload);
+      state.customers.push(action.payload);
+    },
+    addAllCustomers: (state, action) => {
+      state.customers = action.payload;
     },
   },
 });
 
-export const { addCustomer } = queueSlice.actions;
+export const { addCustomer, addAllCustomers } = queueSlice.actions;
 
 export default queueSlice.reducer;

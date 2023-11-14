@@ -2,11 +2,13 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import Customer from './Customer';
 import CryptoJS from 'crypto-js';
+import moment from 'moment-timezone';
 
 describe('Customer Component', () => {
   const mockEmail = 'test@example.com';
   const mockName = 'John Doe';
   const mockExpectedTime = new Date().toISOString();
+  const formattedDate = moment(mockExpectedTime).tz('Europe/London').format('MMMM DD, YYYY, h:mm A');
   const gravatarHash = CryptoJS.MD5(mockEmail.trim().toLowerCase()).toString();
   const gravatarUrl = `https://www.gravatar.com/avatar/${gravatarHash}`;
 
@@ -27,6 +29,6 @@ describe('Customer Component', () => {
 
   it('displays the correct customer expected time', () => {
     render(<Customer email={mockEmail} name={mockName} expectedTime={mockExpectedTime} />);
-    expect(screen.getByText(mockExpectedTime)).toBeInTheDocument();
+    expect(screen.getByText(formattedDate)).toBeInTheDocument();
   });
 });
