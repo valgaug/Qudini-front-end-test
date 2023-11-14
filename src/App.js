@@ -1,12 +1,12 @@
 import React from 'react';
 import 'normalize.css';
-import Container from './components/Container';
-import Logo from './components/Logo';
-import Navigation from './components/Navigation';
-import QueueScreen from './Queue/QueueScreen';
+import Container from './Layouts/Container';
+import Logo from './Layouts/Logo';
+import Navigation from './Layouts/Navigation';
+import QueueScreen from './Components/Queue/QueueScreen';
 import './App.css';
 import logo from './qudini-logo.png';
-import Content from './components/Content';
+import Content from './Layouts/Content';
 
 const App = () => (
   <Container>

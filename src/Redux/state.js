@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
-import queueReducer from './Queue/reducer';
+import queueReducer from './reducer';
 
 export default configureStore({
   reducer: {

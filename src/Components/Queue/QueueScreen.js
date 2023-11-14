@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { fetchQueueData } from '../mockApi';
-import Customer from './components/Customer';
+import { fetchQueueData } from '../../mockApi';
+import Customer from '../Customer/Customer';
 
 const QueueScreen = () => {
   const [customers, setCustomers] = useState([]);
