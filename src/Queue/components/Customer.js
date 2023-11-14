@@ -22,7 +22,6 @@ const Customer = ({ email, name }) => {
       />
       <Content>
         <Name>{name}</Name>
-        <div></div>
       </Content>
     </CustomerCard>
   );
