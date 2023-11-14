@@ -25,7 +25,7 @@ describe('FilterInput', () => {
       </Provider>
     );
 
-    expect(getByPlaceholderText(/filter customers/i)).toBeInTheDocument();
+    expect(getByPlaceholderText(/filter customers by name/i)).toBeInTheDocument();
   });
 
   test('dispatches setFilterQuery action on input change', () => {
@@ -35,7 +35,7 @@ describe('FilterInput', () => {
       </Provider>
     );
 
-    const input = getByPlaceholderText(/filter customers/i);
+    const input = getByPlaceholderText(/filter customers by name/i);
     fireEvent.change(input, { target: { value: 'Valentin' } });
 
     expect(store.dispatch).toHaveBeenCalledWith(setFilterQuery('Valentin'));

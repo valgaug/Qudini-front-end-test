@@ -16,6 +16,7 @@
     "react-dom": "latest",
     "react-redux": "latest",
     "react-scripts": "latest",
+    "redux-mock-store": "^1.5.4",
     "styled-components": "latest",
     "typescript": "latest"
   },
