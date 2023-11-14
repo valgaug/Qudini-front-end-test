@@ -1,27 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
+import App from './App';
 import { Provider } from 'react-redux';
-import 'normalize.css';
 import store from './state';
-import Container from './components/Container';
-import Logo from './components/Logo';
-import Navigation from './components/Navigation';
-import QueueScreen from './Queue/QueueScreen';
-import './index.css';
-import logo from './qudini-logo.png';
-import Content from './components/Content';
 
-const App = () => (
-  <Provider store={store}>
-    <Container>
-      <Navigation>
-        <Logo src={logo} />
-      </Navigation>
-      <Content>
-        <QueueScreen />
-      </Content>
-    </Container>
-  </Provider>
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </React.StrictMode>
 );
-
-ReactDOM.render(<App />, document.getElementById('root'));

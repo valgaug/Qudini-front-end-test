@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { fetchQueueData } from '../mockApi';
+import Customer from './components/Customer';
 
 const QueueScreen = () => {
   const [customers, setCustomers] = useState([]);
@@ -21,9 +22,7 @@ const QueueScreen = () => {
   return (
     <div>
       {customers.map((customer) => (
-        <div key={customer.id}>
-          <div>{customer.customer.name}</div>
-        </div>
+        <Customer key={customer.id} email={customer.customer.emailAddress} name={customer.customer.name} />
       ))}
     </div>
   );
