@@ -3,9 +3,10 @@ import { fetchQueueData } from '../../mockApi';
 import Customer from '../Customer/Customer';
 import { useDispatch, useSelector } from 'react-redux';
 import { addAllCustomers } from '../../Redux/reducer';
+import FilteredInput from '../Filtering/FilterInput';
 
 const QueueScreen = () => {
-  const { customers } = useSelector((state) => state.queue);
+  const { customers, filterQuery } = useSelector((state) => state.queue);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -23,10 +24,13 @@ const QueueScreen = () => {
     fetchData();
   }, []);
 
+  const filteredCustomers = customers.filter((customer) => customer.customer.name.toLowerCase().includes(filterQuery.toLowerCase()));
+
   return (
     <div>
-      {customers !== undefined &&
-        customers.map((customer) => (
+      <FilteredInput />
+      {filteredCustomers !== undefined &&
+        filteredCustomers.map((customer) => (
           <Customer
             key={customer.id}
             email={customer.customer.emailAddress}
