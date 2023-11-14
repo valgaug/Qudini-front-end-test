@@ -2,6 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 export const initialState = {
   customers: [],
+  filterQuery: '',
 };
 
 const queueSlice = createSlice({
@@ -14,9 +15,12 @@ const queueSlice = createSlice({
     addAllCustomers: (state, action) => {
       state.customers = action.payload;
     },
+    setFilterQuery: (state, action) => {
+      state.filterQuery = action.payload;
+    },
   },
 });
 
-export const { addCustomer, addAllCustomers } = queueSlice.actions;
+export const { addCustomer, addAllCustomers, setFilterQuery } = queueSlice.actions;
 
 export default queueSlice.reducer;
