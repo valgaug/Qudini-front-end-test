@@ -22,7 +22,11 @@ const QueueScreen = () => {
     };
 
     fetchData();
-  }, []);
+
+    const intervalId = setInterval(fetchData, 30000);
+
+    return () => clearInterval(intervalId);
+  }, [dispatch]);
 
   const filteredCustomers = customers.filter((customer) => customer.customer.name.toLowerCase().includes(filterQuery.toLowerCase()));
 
@@ -36,8 +40,6 @@ const QueueScreen = () => {
             email={customer.customer.emailAddress}
             name={customer.customer.name}
             expectedTime={customer.originalExpectedTime}
-            // I assumed we want to display the 'originalExpectedTime'
-            // and not 'expectedTime' which is the same for everyone
           />
         ))}
     </div>
