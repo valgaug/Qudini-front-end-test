@@ -8,7 +8,7 @@ describe('Customer Component', () => {
   const mockEmail = 'test@example.com';
   const mockName = 'John Doe';
   const mockExpectedTime = new Date().toISOString();
-  const formattedDate = moment(mockExpectedTime).tz('Europe/London').format('MMMM DD, YYYY, h:mm A');
+  const formattedDate = moment(mockExpectedTime).tz('Europe/London').format('h:mm A DD/MM/YY');
   const gravatarHash = CryptoJS.MD5(mockEmail.trim().toLowerCase()).toString();
   const gravatarUrl = `https://www.gravatar.com/avatar/${gravatarHash}`;
 

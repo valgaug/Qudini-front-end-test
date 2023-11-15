@@ -7,6 +7,7 @@ import QueueScreen from './Components/Queue/QueueScreen';
 import './App.css';
 import logo from './qudini-logo.png';
 import Content from './Layouts/Content';
+import FilteredInput from './Components/Filtering/FilterInput';
 
 const App = () => (
   <Container>
@@ -14,6 +15,7 @@ const App = () => (
       <Logo src={logo} />
     </Navigation>
     <Content>
+      <FilteredInput />
       <QueueScreen />
     </Content>
   </Container>

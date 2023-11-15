@@ -3,7 +3,7 @@ import { fetchQueueData } from '../../mockApi';
 import Customer from '../Customer/Customer';
 import { useDispatch, useSelector } from 'react-redux';
 import { addAllCustomers } from '../../Redux/reducer';
-import FilteredInput from '../Filtering/FilterInput';
+import Queue from '../../Layouts/Queue';
 
 const QueueScreen = () => {
   const { customers, filterQuery } = useSelector((state) => state.queue);
@@ -31,8 +31,7 @@ const QueueScreen = () => {
   const filteredCustomers = customers.filter((customer) => customer.customer.name.toLowerCase().includes(filterQuery.toLowerCase()));
 
   return (
-    <div>
-      <FilteredInput />
+    <Queue>
       {filteredCustomers !== undefined &&
         filteredCustomers.map((customer) => (
           <Customer
@@ -42,7 +41,7 @@ const QueueScreen = () => {
             expectedTime={customer.originalExpectedTime}
           />
         ))}
-    </div>
+    </Queue>
   );
 };
 

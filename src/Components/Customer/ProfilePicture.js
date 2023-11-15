@@ -6,8 +6,8 @@ const StyledImage = styled.img`
   height: 290px;
   width: 290px;
   background-color: grey;
-  border-top-left-radius: 0.2em;
-  border-top-right-radius: 0.2em;
+  border-top-left-radius: 0.6em;
+  border-top-right-radius: 0.6em;
   object-fit: cover;
 `;
 

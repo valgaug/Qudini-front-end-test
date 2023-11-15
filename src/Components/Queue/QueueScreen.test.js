@@ -43,7 +43,7 @@ describe('QueueScreen', () => {
   //     );
 
   //     // Simulate typing into the filter input
-  //     fireEvent.change(getByPlaceholderText(/filter customers by name/i), { target: { value: 'Alice2' } });
+  //     fireEvent.change(getByPlaceholderText(/search/i), { target: { value: 'Alice2' } });
 
   //     // Assert that only the filtered customer is displayed
   //     expect(await findByText('Alice')).toBeInTheDocument();
