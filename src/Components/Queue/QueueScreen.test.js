@@ -18,8 +18,8 @@ describe('QueueScreen', () => {
       queue: {
         ...initialState,
         customers: [
-          { id: 1, customer: { name: 'Alice', emailAddress: 'alice@example.com' }, originalExpectedTime: '9:00 AM' },
-          { id: 2, customer: { name: 'Bob', emailAddress: 'bob@example.com' }, originalExpectedTime: '10:00 AM' },
+          { id: 1, customer: { name: 'Alice', emailAddress: 'alice@example.com' }, originalExpectedTime: '2017-01-18T18:19:01.000Z' },
+          { id: 2, customer: { name: 'Bob', emailAddress: 'bob@example.com' }, originalExpectedTime: '2017-09-27T13:04:15.000+01:00' },
         ],
       },
     });
